@@ -1,0 +1,17 @@
+{
+  "name": "mhns",
+  "version": "1.0.0",
+  "description": "A WP theme for Meeting House Nursery School",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ovidesign",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.24.1",
+    "gulp": "^3.9.1",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-sass": "^4.0.1"
+  }
+}
