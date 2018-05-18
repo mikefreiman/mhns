@@ -2,7 +2,7 @@
 /**
  * Sample implementation of the Custom Header feature
  *
- * You can add an optional custom header image to header.php like so ...
+ * You can add an optional custom header image to header.php like so
  *
 	<?php the_header_image_tag(); ?>
  *
@@ -18,11 +18,10 @@
  */
 function mhns_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'mhns_custom_header_args', array(
-		'default-image'          => '',
+		'default-image'          => get_template_directory_uri() . '/img/mhns-header.jpg',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
+		'width'                  => 2000,
+		'height'                 => 1200,
 		'wp-head-callback'       => 'mhns_header_style',
 	) ) );
 }

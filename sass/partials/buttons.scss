@@ -1,0 +1,52 @@
+.btn {
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  text-align: center;
+  border-radius: 0;
+  font-family: $sans;
+  font-size: 16px;
+  padding: 12px 16px;
+  margin: 12px 12px 0 0;
+  min-width: 164px;
+  background-color: transparent;
+  cursor: pointer;
+  // User-Agent Style Overrides
+  border-style: none;
+  border-width: 0px;
+  border-color: transparent;
+  border-image: none;
+  @include phones {
+    display: inline-block;
+    margin: 8px 8px 0 0;
+  }
+  &:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+    outline: none;
+  }
+}
+.btn--violet {
+  border-color: $violet;
+  color: $violet;
+}
+.btn--lt-blue {
+  border-color: $lt-blue;
+  color: $lt-blue;
+}
+.btn--inverse {
+  border-color: $white;
+  background-color: $white;
+  font-weight: 600;
+  color: $lt-blue;
+}
+ .btn--white {
+   border-color: $white;
+   color: $white;
+ }
+.btn--a {
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 8px;
+}

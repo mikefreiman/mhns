@@ -1,0 +1,35 @@
+// Colors
+$primary: #449db2;
+$lt-blue: #71b8c9;
+$dk-blue: #3f92a6;
+$violet: #604d8d;
+$accent: #db4200;
+$text: #212121;
+$white: #fff;
+$black: #000;
+$btn: #3079ed;
+$lt-grey: #f5f5f5;
+$nav: #c7e3ea;
+$nav-dk: #6d6d6d;
+$lines: #ececec;
+
+// Fonts
+$sans:
+  // Safari for OS X and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for OS X (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // KDE
+  "Oxygen",
+  // Ubuntu
+  "Ubuntu",
+  // Gnome
+  "Cantarell",
+// Firefox OS
+  “Fira Sans”,
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif;

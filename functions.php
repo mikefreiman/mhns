@@ -59,6 +59,10 @@ if ( ! function_exists( 'mhns_setup' ) ) :
 			'caption',
 		) );
 
+		/**
+		*	Custom Header
+		*/
+
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'mhns_custom_background_args', array(
 			'default-color' => 'ffffff',
@@ -120,7 +124,10 @@ add_action( 'widgets_init', 'mhns_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mhns_scripts() {
+
 	wp_enqueue_style( 'mhns-style', get_stylesheet_uri() );
+
+		wp_enqueue_script( 'mhns-nav', get_template_directory_uri() . '/js/nav.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'mhns-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -158,4 +165,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
