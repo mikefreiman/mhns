@@ -23,17 +23,10 @@
 <body <?php body_class(); ?>>
 	<?php get_template_part('nav'); ?>
 <div id="page" class="site">
-	<header id="masthead" class="site-header site-header__front group">
-		<div class="site-header__front-img">
+	<header id="masthead" class="hdr group">
+		<div class="hdr__hero">
       <!-- <?php the_header_image_tag(); ?> -->
     </div>
-    <div class="container">
-      <h1 class="site-header__front-heading">Our Philosophy</h1>
-      <p class="site-header__front-desc">The philosophy of Meeting House Nursery School is learning through play. We firmly believe that “To Play Is To Grow,” and continually strive to foster an environment for our children to thrive while actively learning in play-based activities.</p>
-    </div>
 	</header><!-- #masthead -->
-  <section></section>
-  <section></section>
-  <section></section>
-  <section></section>
+<?php get_template_part( 'sections/hdr-sec' ); ?>
 	<div id="content" class="site-content">

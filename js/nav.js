@@ -12,7 +12,7 @@ nav.classList.remove("nav--animatable");
 }
 
 var nav = document.querySelector(".nav");
-var navIcon = document.querySelector(".nav-bar--icon");
+var navIcon = document.querySelector(".nav__icon");
 nav.addEventListener("transitionend", OnTransitionEnd, false);
 navIcon.addEventListener("click", toggleNav, false);
 nav.addEventListener("click", toggleNav, false);

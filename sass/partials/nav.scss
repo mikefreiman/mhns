@@ -31,7 +31,7 @@
   }
 }
 
-.nav-ul {
+.nav__ul {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,8 @@
   }
 }
 
-.page_item {
+.page_item,
+.menu-item {
   display: block;
   @include tablets {
     display: inline-block;
@@ -75,18 +76,17 @@
   }
 }
 
-
 // Nav Animation
-.nav--visible .nav-ul {
+.nav--visible .nav__ul {
     -webkit-transform: none;
             transform: none;
 }
 
-.nav--animatable .nav-ul {
+.nav--animatable .nav__ul {
     transition: all 130ms ease-in;
 }
 
-.nav--visible.nav--animatable .nav-ul {
+.nav--visible.nav--animatable .nav__ul {
     transition: all 330ms ease-out;
 }
 
@@ -99,17 +99,17 @@
 }
 
 // Nav bar (Mobile Only)
-.nav-bar {
+.nav__bar {
   position: relative;
   display: block;
   background-color: $white;
-  height: 48px;
+  border-bottom: 1px solid $lines;
+  height: 54px;
   @include tablets {
     display: none;
   }
 }
-.nav-bar--icon {
-  min-width: 32px;
+.nav__icon {
   position: absolute;
   top: 6px;
   left: 12px;
@@ -117,7 +117,18 @@
   background-repeat: no-repeat;
 }
 
-.nav-logo {
+.call__icon {
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  @include img-path('call.svg');
+  background-repeat: no-repeat;
+}
+
+.nav__logo {
   display: none;
   @include tablets {
     display: block;

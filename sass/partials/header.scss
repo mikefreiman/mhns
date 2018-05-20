@@ -1,49 +1,12 @@
-
-.site-header__front {
+.hdr{
   position: relative;
-  background-color: $dk-blue;
-  padding-bottom: 24px;
 }
 // Front Page Header Image
-.site-header__front-img {
+.hdr__hero {
   position: relative;
   min-height: 400px;
   max-height: 500px;
   @include img-path('mhns-header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.site-header__front-heading {
-  line-height: 1em;
-  padding-top: 16px;
-  font-size: 1.25em;
-  font-weight: 700;
-  white-space: normal;
-  color: $white;
-  @include phones {
-    font-size: 1.5em;
-  }
-  @include tablets {
-    font-size: 2em;
-  }
-}
-
-.site-header__front-desc {
-font-size: .8em;
-line-height: 1.4em;
-padding-top: 16px;
-padding-bottom: 16px;
-font-weight: 400;
-color: $white;
-  @include phones {
-    font-size: 1.25em;
-  }
-  @include tablets {
-    font-size: 1.5em;
-  }
-}
-
-section {
-  height: 400px;
 }
