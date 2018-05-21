@@ -1,9 +1,4 @@
 <section class="hdr__sec">
-  <div class="hdr__div-logo">
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hdr__logo">
-      <img src="<?php echo get_theme_file_uri( 'img/mhns.svg' ); ?>" alt="MHNS Logo">
-    </a>
-  </div>
   <div class="box">
     <?php
 

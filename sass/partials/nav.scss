@@ -43,7 +43,7 @@
   -webkit-transform: translateX(-103%);
           transform: translateX(-103%);
   pointer-events: auto;
-  background-color: $white;
+  background-color: #fafafa;
   will-change: transform;
   padding-top: 48px;
   padding-bottom: 0;
@@ -57,6 +57,8 @@
     padding-bottom: 12px;
     box-shadow: none;
     transform: translateX(0);
+    border-top: 2px solid $lt-blue;
+    border-bottom: 1px solid #242526;
   }
 }
 
@@ -71,7 +73,7 @@
     padding: 18px 32px;
     text-decoration: none;
     text-transform: capitalize;
-    color: darken($primary, 50%);
+    color: darken($dk-blue, 50%);
     font-size: 16px;
   }
 }
@@ -102,8 +104,8 @@
 .nav__bar {
   position: relative;
   display: block;
-  background-color: $white;
-  border-bottom: 1px solid $lines;
+  background-color: #fafafa;
+  border-bottom: 1px solid #242526;
   height: 54px;
   @include tablets {
     display: none;
@@ -115,6 +117,7 @@
   left: 12px;
   @include img-path('navicon.svg');
   background-repeat: no-repeat;
+  min-width: 32px;
 }
 
 .call__icon {
@@ -145,5 +148,26 @@
       width: 100%;
       height: auto;
     }
+  }
+}
+
+.nav-bar__logo {
+  display: block;
+  position: absolute;
+  z-index: 150;
+  width: 126px;
+  height: auto;
+  top: 6px;
+  left: 50%;
+  margin-left: -65px;
+  background-color: $white;
+  border: 4px solid $white;
+  box-shadow: 0px 5px 11px -1px rgba(29, 49, 53, 0.89);
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @include tablets {
+    display: none;
   }
 }

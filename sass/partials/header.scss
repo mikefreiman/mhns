@@ -1,5 +1,7 @@
 .hdr{
   position: relative;
+  min-width: 100px;
+  background-color: #242526;
 }
 // Front Page Header Image
 .hdr__hero {
@@ -9,4 +11,15 @@
   @include img-path('mhns-header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.ovr {
+  &:before {
+    content: "";
+    display: block;
+    background-color: darken($primary, 20%);
+    height: 8px;
+    width: 48px;
+    margin-bottom: 16px;
+  }
 }

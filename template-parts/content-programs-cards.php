@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-programs.php
+ * Template part for displaying page excerpts for the programs on the home page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -10,11 +10,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php the_title( '<h1 class="hdr__h1 ovr">', '</h1>' ); ?>
-	<div class="hdr__desc">
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+
+	<?php mhns_post_thumbnail(); ?>
+
+	<div class="entry-content">
 		<?php
 		the_excerpt();
 		?>
-		<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>">Read More</a>
 	</div><!-- .entry-content -->
+
 </article><!-- #post-<?php the_ID(); ?> -->

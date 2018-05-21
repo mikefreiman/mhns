@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<?php get_template_part('nav'); ?>
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header hdr">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();

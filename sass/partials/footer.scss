@@ -1,6 +1,12 @@
-.footer {
-  background: #2a3549;
+.ftr{
+  background: $dk;
+  padding: 3em 0;
+  border-top: 6px solid lighten($dk, 20%);
 }
-.footer__copy {
-  color: #fff;
+.ftr__ref {
+  color: $lt;
+  a{
+    font-decoration: none;
+    color: darken($lt, 15%);
+  }
 }
