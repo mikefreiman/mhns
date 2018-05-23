@@ -127,7 +127,7 @@ function mhns_scripts() {
 
 	wp_enqueue_style( 'mhns-style', get_stylesheet_uri() );
 
-		wp_enqueue_script( 'mhns-nav', get_template_directory_uri() . '/js/nav.js', array(), '20151216', true );
+		wp_enqueue_script( 'mhns-nav', get_template_directory_uri() . '/js/nav.js', array(), '20180525', true );
 
 	wp_enqueue_script( 'mhns-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

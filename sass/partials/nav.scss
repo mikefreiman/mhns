@@ -1,64 +1,71 @@
 // Nav
 .nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 150;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  pointer-events: none;
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    opacity: 0;
-    pointer-events: none;
-    will-change: opacity;
-    transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
-  }
-  @include tablets {
-    position: relative;
-    display: block;
-    z-index: 120;
-    overflow: visible;
-    background-color: $white;
-  }
+  display: flex;
+  flex-flow: row no-wrap;
+  position: relative;
+  height: 75px;
+  background-color: #fafafa;
+  border-top: 2px solid $lt-blue;
+  border-bottom: 1px solid #242526;
 }
+// .nav {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   z-index: 150;
+//   width: 100%;
+//   height: 100%;
+//   overflow: auto;
+//   pointer-events: none;
+//   &:after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0,0,0,0.4);
+//     opacity: 0;
+//     pointer-events: none;
+//     will-change: opacity;
+//     transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
+//   }
+//   @include tablets {
+//     position: relative;
+//     display: block;
+//     z-index: 120;
+//     overflow: visible;
+//     background-color: $white;
+//   }
+// }
 
 .nav__ul {
-  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  top: -2px;
   z-index: 160;
   max-width: 400px;
   width: 90%;
-  height: 100%;
+  height: 102%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateX(-103%);
           transform: translateX(-103%);
   pointer-events: auto;
   background-color: #fafafa;
   will-change: transform;
-  padding-top: 48px;
-  padding-bottom: 0;
+  padding-top: 54px;
   @include tablets {
-    display: block;
-    max-width: 100%;
-    text-align: right;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
     width: 100%;
-    padding-right: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    box-shadow: none;
-    transform: translateX(0);
-    border-top: 2px solid $lt-blue;
-    border-bottom: 1px solid #242526;
+    max-width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    padding-top: 0;
   }
 }
 
@@ -66,30 +73,39 @@
 .menu-item {
   display: block;
   @include tablets {
-    display: inline-block;
+    margin: 0 12px;
+    display: inline-block; // Fallback
+    display: flex;
   }
   a {
-    display: block;
-    padding: 18px 32px;
+    padding: 0 24px;
+    line-height: 75px;
+    font-size: 18px;
     text-decoration: none;
     text-transform: capitalize;
-    color: darken($dk-blue, 50%);
-    font-size: 16px;
+    color: $dk;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
   }
 }
 
 // Nav Animation
-.nav--visible .nav__ul {
+.nav__ul {
+  &.nav--visible {
     -webkit-transform: none;
-            transform: none;
-}
+    transform: none;
+  }
 
-.nav--animatable .nav__ul {
+  &.nav--animatable {
     transition: all 130ms ease-in;
-}
+  }
 
-.nav--visible.nav--animatable .nav__ul {
+  &.nav--visible.nav--animatable {
     transition: all 330ms ease-out;
+  }
+
 }
 
 .nav--visible {
@@ -102,39 +118,39 @@
 
 // Nav bar (Mobile Only)
 .nav__bar {
-  position: relative;
-  display: block;
-  background-color: #fafafa;
-  border-bottom: 1px solid #242526;
-  height: 54px;
+  display: flex;
+  z-index: 150;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
   @include tablets {
-    display: none;
+    z-index: -100;
   }
 }
 .nav__icon {
-  position: absolute;
-  top: 6px;
-  left: 12px;
+  z-index: 155;
   @include img-path('navicon.svg');
   background-repeat: no-repeat;
   min-width: 32px;
 }
-
-.call__icon {
-  position: absolute;
-  display: block;
-  top: 5px;
-  right: 12px;
-  width: 42px;
-  height: 42px;
-  @include img-path('call.svg');
-  background-repeat: no-repeat;
-}
+//
+// .call__icon {
+//   position: absolute;
+//   display: block;
+//   top: 5px;
+//   right: 12px;
+//   width: 42px;
+//   height: 42px;
+//   @include img-path('call.svg');
+//   background-repeat: no-repeat;
+// }
 
 .nav__logo {
   display: none;
   @include tablets {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 200;
     width: 250px;

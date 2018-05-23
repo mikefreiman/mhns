@@ -1,15 +1,12 @@
-<div class="nav__bar">
+<nav id="site-navigation" class="nav main-navigation">
   <button class="btn nav__icon" aria-controls="primary-menu" aria-label="Open the navigation drawer." aria-expanded="false">
   </button>
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nav-bar__logo">
-      <img src="<?php echo get_theme_file_uri( 'img/mhns.svg' ); ?>" alt="MHNS Logo">
-    </a>
-  <a href="tel:1-608-233-9776" class="call__icon" aria-label="Call us at 608-233-9776."></a>
-</div>
-<nav id="site-navigation" class="nav main-navigation">
   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nav__logo">
     <img src="<?php echo get_theme_file_uri( 'img/mhns.svg' ); ?>" alt="MHNS Logo">
   </a>
+  <div class="nav__bar">
+    <a href="tel:1-608-233-9776" class="call__icon" aria-label="Call us at 608-233-9776."></a>
+  </div>
   <?php
   wp_nav_menu( array(
     'menu' => 'primary-menu',

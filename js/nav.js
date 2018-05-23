@@ -11,7 +11,7 @@ function OnTransitionEnd() {
 nav.classList.remove("nav--animatable");
 }
 
-var nav = document.querySelector(".nav");
+var nav = document.querySelector(".nav__ul");
 var navIcon = document.querySelector(".nav__icon");
 nav.addEventListener("transitionend", OnTransitionEnd, false);
 navIcon.addEventListener("click", toggleNav, false);
