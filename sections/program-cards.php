@@ -1,5 +1,4 @@
-<section class="">
-  <div class="box">
+<section class="cards">
     <?php
 
 		// The Query
@@ -14,5 +13,4 @@
 		/* Restore original Post Data */
 		wp_reset_postdata();
 		?>
-  </div>
 </section>

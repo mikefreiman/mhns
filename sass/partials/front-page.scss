@@ -1,67 +1,15 @@
-.hdr__sec {
-  background-color: $dk-blue;
-  padding-bottom: 24px;
+.cards {
+  display: flex;
+  flex-flow: row wrap;
 }
-
-.hdr__div-logo{
-  position: relative;
-  padding: 44px 0;
+.card {
+  width: 100%;
+  margin: 2px;
+  padding: 16px;
+  background-color: #fafafa;
+  border: 1px solid $lines;
   @include tablets {
-    padding: 16px 0;
-  }
-}
-
-.hdr__logo {
-  display: block;
-  position: absolute;
-  z-index: 110;
-  width: 250px;
-  height: auto;
-  left: 50%;
-  top: -48px;
-  margin-left: -125px;
-  @include phones {
-    left: 16px;
-    margin-left: 0;
-  }
-  background-color: $white;
-  border: 8px solid $white;
-  box-shadow: 0px 5px 11px -1px rgba(29, 49, 53, 0.89);
-  img {
-    width: 100%;
-    height: auto;
-  }
-  @include tablets {
-    display: none;
-  }
-}
-
-.hdr__h1{
-  line-height: 1em;
-  padding-top: 16px;
-  font-size: 1.25em;
-  font-weight: 700;
-  white-space: normal;
-  color: $white;
-  @include phones {
-    font-size: 1.5em;
-  }
-  @include tablets {
-    font-size: 2em;
-  }
-}
-
-.hdr__desc p {
-font-size: 1em;
-line-height: 1.45em;
-padding-top: 16px;
-padding-bottom: 16px;
-font-weight: 400;
-color: $white;
-  @include phones {
-    font-size: 1.25em;
-  }
-  @include tablets {
-    font-size: 1.5em;
+    width: 50%;
+    margin: 2px 0;
   }
 }
