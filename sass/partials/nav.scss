@@ -1,55 +1,40 @@
+// All <a>
+a {
+  text-decoration: none;
+}
 // Nav
 .nav {
   display: flex;
-  flex-flow: row no-wrap;
+  flex-flow: row nowrap;
   position: relative;
-  height: 75px;
+  height: 72px;
   background-color: #fafafa;
-  border-top: 2px solid $lt-blue;
-  border-bottom: 1px solid #242526;
 }
-// .nav {
-//   position: fixed;
-//   left: 0;
-//   top: 0;
-//   z-index: 150;
-//   width: 100%;
-//   height: 100%;
-//   overflow: auto;
-//   pointer-events: none;
-//   &:after {
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: rgba(0,0,0,0.4);
-//     opacity: 0;
-//     pointer-events: none;
-//     will-change: opacity;
-//     transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
-//   }
-//   @include tablets {
-//     position: relative;
-//     display: block;
-//     z-index: 120;
-//     overflow: visible;
-//     background-color: $white;
-//   }
-// }
 
+// Navbar - Switches z-index at media queries
+.nav__bar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 75px;
+  width: 100%;
+  z-index: 150;
+  @include tablets {
+    z-index: -100;
+  }
+}
+
+// Nav <ul>
 .nav__ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: fixed;
-  top: -2px;
+  top: 0;
   z-index: 160;
   max-width: 400px;
   width: 90%;
-  height: 102%;
+  height: 100%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateX(-103%);
           transform: translateX(-103%);
@@ -61,29 +46,35 @@
     flex-direction: row;
     justify-content: flex-end;
     position: relative;
+    top: 0;
+    max-width: 2500px;
     width: 100%;
-    max-width: 100%;
+    box-shadow: none;
     -webkit-transform: translateX(0);
             transform: translateX(0);
     padding-top: 0;
   }
 }
 
+// Nav <li>
 .page_item,
 .menu-item {
-  display: block;
+  display: flex;
   @include tablets {
     margin: 0 12px;
     display: inline-block; // Fallback
     display: flex;
   }
+  // Nav <a>
   a {
     padding: 0 24px;
-    line-height: 75px;
+    line-height: 54px;
     font-size: 18px;
-    text-decoration: none;
     text-transform: capitalize;
     color: $dk;
+    @include tablets {
+      line-height: 74px;
+    }
     &:hover {
       background-color: $primary;
       color: $white;
@@ -91,6 +82,48 @@
   }
 }
 
+// Nav ~ active class
+.current_page_item a {
+  color: $dk-blue;
+  @include tablets {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.call__btn {
+  display: none;
+  @include tablets {
+    display: flex;
+    white-space: nowrap;
+    line-height: 75px;
+    padding: 0 16px;
+    background-color: $primary;
+    color: $white;
+  }
+  @include desktops {
+    padding: 0 24px;
+  }
+}
+// svg & icons
+.nav__icon,
+.icon__call {
+  z-index: 155;
+  @include tablets {
+    z-index: -100;
+  }
+}
+.icon-call {
+  width: 36px;
+  height: auto;
+  margin: 16px 12px 0 0;
+}
+
+.icon-nav {
+  width: 26px;
+  height: auto;
+  margin: 22px 0 0 12px;
+}
 // Nav Animation
 .nav__ul {
   &.nav--visible {
@@ -111,79 +144,26 @@
 .nav--visible {
   pointer-events: auto;
 }
-.nav--visible.nav:after {
-    opacity: 1;
-    pointer-events: auto;
-}
 
-// Nav bar (Mobile Only)
-.nav__bar {
-  display: flex;
-  z-index: 150;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 75px;
-  @include tablets {
-    z-index: -100;
-  }
-}
-.nav__icon {
-  z-index: 155;
-  @include img-path('navicon.svg');
-  background-repeat: no-repeat;
-  min-width: 32px;
-}
-//
-// .call__icon {
-//   position: absolute;
-//   display: block;
-//   top: 5px;
-//   right: 12px;
-//   width: 42px;
-//   height: 42px;
-//   @include img-path('call.svg');
-//   background-repeat: no-repeat;
-// }
-
-.nav__logo {
-  display: none;
-  @include tablets {
-    display: none;
-    position: absolute;
-    z-index: 200;
-    width: 250px;
-    height: auto;
-    left: 12px;
-    top: 6px;
-    background-color: $white;
-    border: 8px solid $white;
-    box-shadow: 0px 5px 11px -1px rgba(29, 49, 53, 0.89);
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-}
-
-.nav-bar__logo {
+.logo__icon {
   display: block;
   position: absolute;
-  z-index: 150;
-  width: 126px;
+  z-index: 140;
+  width: 150px;
   height: auto;
-  top: 6px;
   left: 50%;
-  margin-left: -65px;
+  margin: 6px 0 0 -75px;
   background-color: $white;
-  border: 4px solid $white;
+  border: 8px solid $white;
   box-shadow: 0px 5px 11px -1px rgba(29, 49, 53, 0.89);
   img {
     width: 100%;
     height: auto;
   }
   @include tablets {
-    display: none;
+    z-index: 165;
+    width: 225px;
+    left: 0;
+    margin: 6px 0 0 12px;
   }
 }
