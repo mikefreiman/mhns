@@ -13,17 +13,9 @@
   background-size: cover;
 }
 
-.hdr__sec {
-  background-color: $dk-blue;
-  padding-bottom: 24px;
-}
-
-.hdr__div-logo{
+.hdr__div-logo {
   position: relative;
   padding: 44px 0;
-  @include tablets {
-    padding: 16px 0;
-  }
 }
 
 .hdr__logo {
@@ -45,38 +37,5 @@
   img {
     width: 100%;
     height: auto;
-  }
-  @include tablets {
-    display: none;
-  }
-}
-
-.hdr__h1{
-  line-height: 1em;
-  padding-top: 16px;
-  font-size: 1.25em;
-  font-weight: 700;
-  white-space: normal;
-  color: $white;
-  @include phones {
-    font-size: 1.5em;
-  }
-  @include tablets {
-    font-size: 2em;
-  }
-}
-
-.hdr__desc p {
-font-size: 1em;
-line-height: 1.45em;
-padding-top: 16px;
-padding-bottom: 16px;
-font-weight: 400;
-color: $white;
-  @include phones {
-    font-size: 1.25em;
-  }
-  @include tablets {
-    font-size: 1.5em;
   }
 }

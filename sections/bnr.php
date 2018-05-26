@@ -1,4 +1,4 @@
-<section class="hdr__sec">
+<section class="bnr">
   <div class="box">
     <?php
 
@@ -8,7 +8,7 @@
 		// The Loop
 		while ( $the_query->have_posts() ) {
 			$the_query->the_post();
-			get_template_part( 'template-parts/content', 'hdr' );
+			get_template_part( 'template-parts/content', 'bnr' );
 		}
 
 		/* Restore original Post Data */

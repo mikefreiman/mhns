@@ -10,8 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php the_title( '<h1 class="hdr__h1">', '</h1>' ); ?>
-	<div class="hdr__desc">
+	<?php the_title( '<h1 class="bnr__h1">', '</h1>' ); ?>
+	<div class="bnr__desc">
 		<?php
 		the_excerpt();
 		?>

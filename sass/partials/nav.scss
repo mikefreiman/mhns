@@ -19,9 +19,6 @@ a {
   height: 75px;
   width: 100%;
   z-index: 150;
-  @include tablets {
-    z-index: -100;
-  }
 }
 
 // Nav <ul>
@@ -42,29 +39,12 @@ a {
   background-color: #fafafa;
   will-change: transform;
   padding-top: 54px;
-  @include tablets {
-    flex-direction: row;
-    justify-content: flex-end;
-    position: relative;
-    top: 0;
-    max-width: 2500px;
-    width: 100%;
-    box-shadow: none;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    padding-top: 0;
-  }
 }
 
 // Nav <li>
 .page_item,
 .menu-item {
   display: flex;
-  @include tablets {
-    margin: 0 12px;
-    display: inline-block; // Fallback
-    display: flex;
-  }
   // Nav <a>
   a {
     padding: 0 24px;
@@ -72,46 +52,21 @@ a {
     font-size: 18px;
     text-transform: capitalize;
     color: $dk;
-    @include tablets {
-      line-height: 74px;
-    }
-    &:hover {
-      background-color: $primary;
-      color: $white;
-    }
   }
 }
 
 // Nav ~ active class
 .current_page_item a {
   color: $dk-blue;
-  @include tablets {
-    background-color: $primary;
-    color: $white;
-  }
 }
 
 .call__btn {
   display: none;
-  @include tablets {
-    display: flex;
-    white-space: nowrap;
-    line-height: 75px;
-    padding: 0 16px;
-    background-color: $primary;
-    color: $white;
-  }
-  @include desktops {
-    padding: 0 24px;
-  }
 }
 // svg & icons
 .nav__icon,
 .icon__call {
   z-index: 155;
-  @include tablets {
-    z-index: -100;
-  }
 }
 .icon-call {
   width: 36px;
@@ -159,11 +114,5 @@ a {
   img {
     width: 100%;
     height: auto;
-  }
-  @include tablets {
-    z-index: 165;
-    width: 225px;
-    left: 0;
-    margin: 6px 0 0 12px;
   }
 }
