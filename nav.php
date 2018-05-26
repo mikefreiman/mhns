@@ -1,6 +1,6 @@
 <nav id="site-navigation" class="nav main-navigation">
   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo__icon">
-    <img src="<?php echo get_theme_file_uri( 'img/mhns.svg' ); ?>" alt="MHNS Logo">
+    <?php get_template_part( 'icons/logoSVG' ); ?>
   </a>
   <div class="nav__bar">
     <div class="nav__icon" aria-controls="primary-menu" aria-label="Open the navigation drawer." role="button" aria-disabled="false" tabindex="0">
