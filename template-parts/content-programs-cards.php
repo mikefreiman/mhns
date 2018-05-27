@@ -8,18 +8,9 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" class="card">
-	<header class="card__hdr">
-		<?php the_title( '<h1 class="card__h1">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<?php mhns_post_thumbnail(); ?>
-
-	<div class="card__desc">
-		<?php
-		the_excerpt();
-		?>
-	</div><!-- .entry-content -->
-
-</article><!-- #post-<?php the_ID(); ?> -->
+<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" id="post-<?php the_ID(); ?>" class="card">
+	<?php the_title( '<h1 class="card__h1">', '</h1>' ); ?>
+	<div class="card__sec">
+		<?php the_excerpt(); ?>
+	</div>
+</a>

@@ -6,7 +6,7 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat-util');
 
 // Sass
-// Static Server + watching scss/html files
+// Static Server + watching scss files
 gulp.task('serve', ['mobileCSS', 'belowFold', '900pxCSS'], function() {
 
     browserSync.init({
@@ -16,7 +16,8 @@ gulp.task('serve', ['mobileCSS', 'belowFold', '900pxCSS'], function() {
     gulp.watch('**/*.scss', ['mobileCSS', 'belowFold', '900pxCSS']);
 });
 
-// Compile sass into CSS & auto-inject into browsers
+// Compile Sass into CSS as 3 tasks
+// 1
 gulp.task('mobileCSS', function() {
     return gulp.src("./sass/aboveFold.scss")
         .pipe(sass())
@@ -30,21 +31,19 @@ gulp.task('mobileCSS', function() {
         .pipe(gulp.dest("./css/"))
         .pipe(browserSync.stream());
 });
-
+// 2
 gulp.task('belowFold', function() {
     return gulp.src("./sass/belowFold.scss")
         .pipe(sass())
         .pipe(cleancss({keepBreaks: false}))
         .pipe(gulp.dest("./css/"))
-        .pipe(browserSync.stream());
 });
-
+// 3
 gulp.task('900pxCSS', function() {
     return gulp.src("./sass/900px.scss")
         .pipe(sass())
         .pipe(cleancss({keepBreaks: false}))
         .pipe(gulp.dest("./css/"))
-        .pipe(browserSync.stream());
 });
 
 gulp.task('default', ['serve']);

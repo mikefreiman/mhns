@@ -15,6 +15,6 @@
 		<?php
 		the_excerpt();
 		?>
-		<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>">Read More</a>
+		<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" class="bnr__a">Read More</a>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -141,7 +141,7 @@ function belowTheFold_css() {
 	wp_enqueue_style('btf');
 }
 
-add_action('wp_head', 'belowTheFold_css');
+add_action('wp_footer', 'belowTheFold_css');
 
 /**
 * 900px and up CSS - Adds css via media query in link tag.
@@ -149,11 +149,11 @@ add_action('wp_head', 'belowTheFold_css');
 * Weird bug - it adds the css to the bottom of the page - happy accident
 */
 	function largeDevice_css() {
-		wp_register_style( '900px', get_template_directory_uri() . '/css/900px.css', array(), '1.0', '(min-width: 899px)' );
+		wp_register_style( '900px', get_template_directory_uri() . '/css/900px.css', array(), '1.1', '(min-width: 899px)' );
 		wp_enqueue_style('900px');
 	}
 
-add_action('wp_head', 'largeDevice_css');
+add_action('wp_footer', 'largeDevice_css');
 
 /**
 * Enqueue scripts and styles.

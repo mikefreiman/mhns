@@ -3,68 +3,46 @@
   "partials/variables"
   ;
 
+@include tablets {
   // layout
   .box {
-    @include tablets {
-      width: 92%;
-    }
-    @include desktops {
-      max-width: 1200px;
-      width: 90%;
+    width: 92%;
+  }
+  // nav
+  .nav__bar {
+    z-index: -100;
+  }
+  .nav__ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    top: 0;
+    max-width: 2500px;
+    width: 100%;
+    box-shadow: none;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    padding-top: 0;
+  }
+  .page_item,
+  .menu-item {
+    margin: 0 12px;
+    display: inline-block; // Fallback
+    display: flex;
+    a {
+        line-height: 74px;
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
     }
   }
-
- // nav
- .nav__bar {
-   @include tablets {
-     z-index: -100;
-   }
- }
-
- .nav__ul {
-   @include tablets {
-     flex-direction: row;
-     justify-content: flex-end;
-     position: relative;
-     top: 0;
-     max-width: 2500px;
-     width: 100%;
-     box-shadow: none;
-     -webkit-transform: translateX(0);
-             transform: translateX(0);
-     padding-top: 0;
-   }
- }
-
- .page_item,
- .menu-item {
-   @include tablets {
-     margin: 0 12px;
-     display: inline-block; // Fallback
-     display: flex;
-   }
-
- a {
-   @include tablets {
-     line-height: 74px;
-   }
-   &:hover {
-     background-color: $primary;
-     color: $white;
-   }
-  }
-}
-
-.current_page_item a {
-  @include tablets {
+  .current_page_item a {
     background-color: $primary;
     color: $white;
   }
-}
-
-// icons
-.call__btn {
-  @include tablets {
+  // icons
+  .call__btn {
     display: flex;
     white-space: nowrap;
     line-height: 75px;
@@ -72,48 +50,62 @@
     background-color: $primary;
     color: $white;
   }
-  @include desktops {
-    padding: 0 24px;
-  }
-}
 
-.nav__icon,
-.icon__call {
-  @include tablets {
+  .nav__icon,
+  .icon__call {
     z-index: -100;
   }
-}
 
-.logo__icon {
-  @include tablets {
+  .logo__icon {
     z-index: 165;
     width: 225px;
     left: 0;
     margin: 6px 0 0 12px;
   }
-}
- // header
- .hdr__div-logo {
-   @include tablets {
-     padding: 16px 0;
-   }
- }
 
- .hdr__logo {
-   @include tablets {
-     display: none;
-   }
- }
+  // header
+  .hdr__div-logo {
+    padding: 16px 0;
+  }
 
-// banner 
+  .hdr__logo {
+    display: none;
+  }
+
+  // banner
  .bnr__h1 {
-   @include tablets {
-     font-size: 2em;
-   }
+   font-size: 2em;
  }
 
  .bnr__desc p {
-   @include tablets {
-     font-size: 1.5em;
-   }
+   font-size: 1.5em;
  }
+}
+
+// card
+.cards {
+  padding: 16px;
+}
+
+.cards_hdl {
+  font-size: 2em;
+}
+
+.card {
+  width: 50%;
+  padding: 48px 32px;
+}
+
+.card__sec {
+  padding: 0 12px;
+}
+
+@include desktops {
+  .box {
+    max-width: 1200px;
+    width: 90%;
+  }
+  .call__btn {
+    padding: 0 24px;
+  }
+}
