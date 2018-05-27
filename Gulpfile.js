@@ -7,13 +7,13 @@ var concat = require('gulp-concat-util');
 
 // Sass
 // Static Server + watching scss/html files
-gulp.task('serve', ['mobileCSS', '900pxCSS'], function() {
+gulp.task('serve', ['mobileCSS', 'belowFold', '900pxCSS'], function() {
 
     browserSync.init({
         proxy: "0.0.0.0:8000"
     });
 
-    gulp.watch('**/*.scss', ['mobileCSS', '900pxCSS']);
+    gulp.watch('**/*.scss', ['mobileCSS', 'belowFold', '900pxCSS']);
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -27,6 +27,14 @@ gulp.task('mobileCSS', function() {
           basename: 'aboveFoldCSS',
           extname: '.php'
         }))
+        .pipe(gulp.dest("./css/"))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('belowFold', function() {
+    return gulp.src("./sass/belowFold.scss")
+        .pipe(sass())
+        .pipe(cleancss({keepBreaks: false}))
         .pipe(gulp.dest("./css/"))
         .pipe(browserSync.stream());
 });

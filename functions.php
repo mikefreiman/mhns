@@ -121,7 +121,7 @@ function mhns_widgets_init() {
 add_action( 'widgets_init', 'mhns_widgets_init' );
 
 /**
-* Critical CSS - Adds inline css to wp_head.
+* INLINE CRITICAL CSS - Adds inline css to wp_head.
 * styles for the above the fold content.
 */
  function critical_css() {
@@ -132,12 +132,29 @@ add_action( 'widgets_init', 'mhns_widgets_init' );
 
 add_action('wp_head', 'critical_css');
 
-	function md_css() {
+/**
+* Below the Fold CSS
+* styles for the below the fold content.
+*/
+function belowTheFold_css() {
+	wp_register_style( 'btf', get_template_directory_uri() . '/css/belowFold.css', array(), '1.0', 'all' );
+	wp_enqueue_style('btf');
+}
+
+add_action('wp_head', 'belowTheFold_css');
+
+/**
+* 900px and up CSS - Adds css via media query in link tag.
+* styles for the above the fold content.
+* Weird bug - it adds the css to the bottom of the page - happy accident
+*/
+	function largeDevice_css() {
 		wp_register_style( '900px', get_template_directory_uri() . '/css/900px.css', array(), '1.0', '(min-width: 899px)' );
 		wp_enqueue_style('900px');
 	}
 
-add_action('wp_head', 'md_css');
+add_action('wp_head', 'largeDevice_css');
+
 /**
 * Enqueue scripts and styles.
 * wp_enqueue_script( 'mhns-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -145,7 +162,7 @@ add_action('wp_head', 'md_css');
 */
 function mhns_scripts() {
 		wp_enqueue_style( 'mhns-style', get_stylesheet_uri(), array(), '2.0', 'print' );
-		wp_enqueue_script( 'mhns-nav', get_template_directory_uri() . '/js/nav.js', array(), '20180525', true );
+		wp_enqueue_script( 'mhns-nav', get_template_directory_uri() . '/js/nav.js', array(), '20180526', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
