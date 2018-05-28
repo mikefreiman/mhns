@@ -3,16 +3,20 @@
   padding-bottom: 24px;
 }
 
-.bnr__h1 {
+.bnr__h1,
+.cards__hdl {
   line-height: 1em;
   padding-top: 16px;
   font-size: 1.25em;
   font-weight: 700;
   white-space: normal;
-  color: $white;
   @include phones {
     font-size: 1.5em;
   }
+}
+
+.bnr__h1 {
+  color: $white;
 }
 
 .bnr__desc p {

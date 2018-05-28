@@ -6,16 +6,9 @@
 }
 
 .cards__hdl {
-  line-height: 1em;
-  padding: 16px 0;
-  font-size: 1.25em;
-  font-weight: 700;
-  white-space: normal;
   color: darken($dk-blue, 20%);
-  @include phones {
-    font-size: 1.5em;
-  }
 }
+
 .card {
   display: flex;
   flex-direction: column;
