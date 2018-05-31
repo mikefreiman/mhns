@@ -15,21 +15,14 @@
 
 	<footer id="colophon" class="site-footer ftr">
     <div class="box">
-      <div class="site-info">
-        <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mhns' ) ); ?>">
-          <?php
-          /* translators: %s: CMS name, i.e. WordPress. */
-          printf( esc_html__( 'Proudly powered by %s', 'mhns' ), 'WordPress' );
-          ?>
-        </a>
-        <span class="sep"> | </span>
-        <p class="ftr__ref">
-          <?php
-          /* translators: 1: Theme name, 2: Theme author. */
-          printf( esc_html__( 'Theme: %1$s by %2$s.', 'mhns' ), 'mhns', '<a href="https://www.ovidesign.com">ovidesign</a>' );
-          ?>
-        </p>
-      </div><!-- .site-info -->  
+			<address class="ftr__ref">
+			    Michele McDonough, Executive Director<br>
+			    Email: <a href="mailto:mhns@sbcglobal.net">
+			    mhns@sbcglobal.net</a><br>
+			    Meeting House Nursery School<br>
+			    900 University Bay Drive<br>
+			    Madison, WI 53705<br>
+			  </address>
     </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

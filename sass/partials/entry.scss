@@ -1,0 +1,19 @@
+.entry-title {
+  margin-bottom: 16px;
+  color: $primary;
+  font-size: 1.675em;
+}
+.entry-content {
+  font-size: 1em;
+  p {
+    margin: 22px 0;
+    line-height: 1.33em;
+    color: $text;
+  }
+  ul,
+  ol {
+    li {
+      margin-left: 32px;
+    }
+  }
+}

@@ -24,9 +24,11 @@
 	<?php get_template_part('nav'); ?>
 <div id="page" class="site">
 	<header id="masthead" class="hdr">
-		<div class="hdr__hero">
-      <!-- <?php the_header_image_tag(); ?> -->
+		<div class="hdr__pg">
+    	<?php the_header_image_tag(); ?>
     </div>
 	</header><!-- #masthead -->
-<?php get_template_part( 'sections/bnr' ); ?>
+	<section class="bnr">
+
+	</section>
 	<div id="content" class="site-content">

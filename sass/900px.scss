@@ -72,6 +72,10 @@
     display: none;
   }
 
+.hdr__pg {
+  max-height: 400px;
+  max-width: 2000px;
+}
   // banner
  .bnr__h1,
  .cards_hdl {
@@ -98,6 +102,24 @@
 
 .card__sec {
   padding: 0 12px;
+}
+
+// entry
+.entry-header {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.entry-title {
+  font-size: 2em;
+}
+
+.entry-content {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 1.12em;
+  p {
+    line-height: 1.4em;
+  }
 }
 
 @include desktops {

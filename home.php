@@ -14,12 +14,8 @@
 
 get_header('front');
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main>
 			<?php get_template_part( 'sections/program-cards' ); ?>
 		</main><!-- #main -->
-	</div><!-- #primary -->
-
 <?php
 get_footer();

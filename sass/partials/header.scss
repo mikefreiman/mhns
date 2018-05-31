@@ -39,3 +39,14 @@
     height: auto;
   }
 }
+
+// Page and Post Headers
+.hdr__pg {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  max-height: 250px;
+  img {
+    align-self: center;
+  }
+}
