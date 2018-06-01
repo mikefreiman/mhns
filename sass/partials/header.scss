@@ -42,11 +42,16 @@
 
 // Page and Post Headers
 .hdr__pg {
-  display: flex;
+  position: relative;
   overflow: hidden;
-  justify-content: center;
-  max-height: 250px;
+  min-height: 300px;
+  height: 100%;
+  max-height: 350px;
   img {
-    align-self: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

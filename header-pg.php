@@ -25,10 +25,12 @@
 <div id="page" class="site">
 	<header id="masthead" class="hdr">
 		<div class="hdr__pg">
-    	<?php the_header_image_tag(); ?>
+    	<?php mhns_post_thumbnail(); ?>
     </div>
 	</header><!-- #masthead -->
 	<section class="bnr">
-
+		<div class="box">
+			<h1 class="bnr__h1">Meeting House Nursery School</h1>
+		</div>
 	</section>
 	<div id="content" class="site-content">
