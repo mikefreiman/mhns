@@ -8,9 +8,16 @@
  */
 
 ?>
-<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" id="post-<?php the_ID(); ?>" class="card">
-	<?php the_title( '<h1 class="card__h1">', '</h1>' ); ?>
+<div class="card">
+	<div class="card__hdr">
+		<?php the_title( '<h1 class="card__h1">', '</h1>' ); ?>
+	</div>
 	<div class="card__sec">
 		<?php the_excerpt(); ?>
 	</div>
-</a>
+	<div class="card__ftr">
+		<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" id="post-<?php the_ID(); ?>" class="btn btn--primary btn--card btn--a">
+			Continue Reading
+		</a>
+	</div>
+</div>

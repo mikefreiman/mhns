@@ -11,28 +11,32 @@
 
 .card {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-flow: column nowrap;
   width: 100%;
   padding: 32px 24px;
   background-color: $white;
   border: 1px solid #ededed;
+  font-size: 1.05em;
 }
 
 .card__h1 {
-  align-self: center;
-  padding: 8px 0 22px 0;
   font-size: 2em;
   color: $dk-blue;
 }
 
 .card__sec {
-  align-self: center;
   max-width: 500px;
-  padding: 0;
+  padding: 2em 0;
   p {
     color: $text;
-    font-size: 1.0em;
-    line-height: 1.33em;
+    font-size: 1.1em;
   }
+}
+
+.card__ftr {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-content: flex-end;
+  justify-content: flex-end;
 }

@@ -27,6 +27,10 @@
     outline: none;
   }
 }
+.btn--primary{
+  border-color: $primary;
+  color: $primary;
+}
 .btn--violet {
   border-color: $violet;
   color: $violet;
@@ -49,4 +53,9 @@
   border-style: solid;
   border-width: 3px;
   border-radius: 8px;
+}
+.btn--card {
+  text-align: left;
+  max-width: 200px;
+  font-weight: 600;
 }
