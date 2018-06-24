@@ -137,7 +137,7 @@ add_action('wp_head', 'critical_css');
 * styles for the below the fold content.
 */
 function belowTheFold_css() {
-	wp_register_style( 'btf', get_template_directory_uri() . '/css/belowFold.css', array(), '1.1', 'all' );
+	wp_register_style( 'btf', get_template_directory_uri() . '/css/belowFold.css', array(), '1.2', 'all' );
 	wp_enqueue_style('btf');
 }
 
@@ -149,7 +149,7 @@ add_action('wp_footer', 'belowTheFold_css');
 * Weird bug - it adds the css to the bottom of the page - happy accident
 */
 	function largeDevice_css() {
-		wp_register_style( '900px', get_template_directory_uri() . '/css/900px.css', array(), '1.2', '(min-width: 899px)' );
+		wp_register_style( '900px', get_template_directory_uri() . '/css/900px.css', array(), '1.3', '(min-width: 899px)' );
 		wp_enqueue_style('900px');
 	}
 

@@ -11,6 +11,7 @@
 <div class="card">
 	<div class="card__hdr">
 		<?php the_title( '<h1 class="card__h1">', '</h1>' ); ?>
+	<p><?php echo get_post_meta($post->ID, 'info', true); ?></p>
 	</div>
 	<div class="card__sec">
 		<?php the_excerpt(); ?>
