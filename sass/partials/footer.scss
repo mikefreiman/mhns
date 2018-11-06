@@ -1,13 +1,4 @@
-.ftr{
-  background: $dk;
-  padding: 2em 0;
-  border-top: 6px solid lighten($primary, 20%);
-}
-.ftr__ref {
-  color: $lt;
-  font-style: normal;
-  a{
-    font-decoration: none;
-    color: darken($lt, 15%);
-  }
+.footer {
+  background-color: $footer-bg;
+  color: $gray-500;
 }

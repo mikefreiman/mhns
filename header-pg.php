@@ -23,14 +23,11 @@
 <body <?php body_class(); ?>>
 	<?php get_template_part('nav'); ?>
 <div id="page" class="site">
-	<header id="masthead" class="hdr">
-		<div class="hdr__pg">
-    	<?php mhns_post_thumbnail(); ?>
-    </div>
-	</header><!-- #masthead -->
-	<section class="bnr">
-		<div class="box">
-			<h1 class="bnr__h1">Meeting House Nursery School</h1>
+	<?php if ( get_post_thumbnail_id() ) : ?>
+	<header id="masthead" class="header">
+		<div class="hero flex-row" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID) ); ?>');">
+
 		</div>
-	</section>
+	</header><!-- #masthead -->
+	<?php endif; ?>
 	<div id="content" class="site-content">

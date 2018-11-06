@@ -1,57 +1,10 @@
-.hdr{
-  position: relative;
-  min-width: 100px;
-  background-color: #242526;
-}
-// Front Page Header Image
-.hdr__hero {
-  position: relative;
-  min-height: 400px;
-  max-height: 500px;
-  @include img-path('mhns-header.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.hdr__div-logo {
-  position: relative;
-  padding: 44px 0;
-}
-
-.hdr__logo {
-  display: block;
-  position: absolute;
-  z-index: 110;
-  width: 250px;
-  height: auto;
-  left: 50%;
-  top: -48px;
-  margin-left: -125px;
-  @include phones {
-    left: 16px;
-    margin-left: 0;
-  }
-  background-color: $white;
-  border: 8px solid $white;
-  box-shadow: 0px 5px 11px -1px rgba(29, 49, 53, 0.89);
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-// Page and Post Headers
-.hdr__pg {
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
+.hero {
   height: 100%;
-  max-height: 350px;
-  img {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  min-height: 350px;
+  max-height: 360px;
+  background-image: url(../img/giraffe.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $gray-600;
 }

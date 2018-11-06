@@ -10,7 +10,7 @@ var concat = require('gulp-concat-util');
 gulp.task('serve', ['mobileCSS', 'belowFold', '900pxCSS'], function() {
 
     browserSync.init({
-        proxy: "0.0.0.0:8000"
+        proxy: "0.0.0.0:8080"
     });
 
     gulp.watch('**/*.scss', ['mobileCSS', 'belowFold', '900pxCSS']);

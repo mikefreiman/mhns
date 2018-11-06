@@ -23,10 +23,9 @@
 <body <?php body_class(); ?>>
 	<?php get_template_part('nav'); ?>
 <div id="page" class="site">
-	<header id="masthead" class="hdr">
-		<div class="hdr__hero">
-      <!-- <?php the_header_image_tag(); ?> -->
-    </div>
+	<header id="masthead" class="header">
+		<?php get_template_part( 'sections/hdr-bulletin' ); ?>
+		<?php get_template_part( 'sections/header-photo' ); ?>
 	</header><!-- #masthead -->
 <?php get_template_part( 'sections/bnr' ); ?>
 	<div id="content" class="site-content">

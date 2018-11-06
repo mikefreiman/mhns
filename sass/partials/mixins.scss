@@ -1,21 +1,22 @@
-// Media Query Breakpoints
-$screen-sm-min: 600px;
-$screen-md-min: 900px;
-$screen-lg-min: 1200px;
-
 // Media Queries Mixin
-@mixin phones {
+@mixin sm {
   @media (min-width: #{$screen-sm-min}) {
     @content;
   }
 }
-@mixin tablets {
+@mixin md {
   @media (min-width: #{$screen-md-min}) {
     @content;
   }
 }
-@mixin desktops {
+@mixin lg {
   @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin fine {
+  @media (pointer: #{$pointer}) {
     @content;
   }
 }
@@ -25,18 +26,6 @@ $screen-lg-min: 1200px;
   background-image: url('/wp-content/themes/mhns/img/#{$image}');
 }
 
-// Vendor Prefixes
-// HOW TO USE:
-// @include prefix(transition, all 2s ease);
-// OUTPUTS:
-// -webkit-transition: all 2s ease;
-// -moz-transition: all 2s ease;
-// -ms-transition: all 2s ease;
-// -o-transition: all 2s ease;
-// transition: all 2s ease;
-@mixin prefix($property, $value, $vendors: (webkit moz ms o)) {
-  @each $vendor in $vendors {
-    #{'-' + $vendor + '-' + $property}: $value;
-  }
-  #{$property}: $value;
+@mixin icon-path($icon) {
+  background-image: url('/wp-content/themes/mhns/icons/#{$icon}');
 }

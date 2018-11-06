@@ -1,123 +1,191 @@
 @import
-  "partials/mixins",
-  "partials/variables"
+  "partials/variables",
+  "partials/mixins"
   ;
 
-@include tablets {
-  // layout
-  .box {
-    width: 92%;
+//
+//  Large Touch Devices
+//
+
+// Layout
+
+.section {
+  padding-top: $spacer * 3.5;
+  padding-bottom: $spacer * 3.5;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.row-25,
+.row-50 {
+  width: 50%;
+  padding: 0 $spacer * 2 0;
+}
+
+.row-25 {
+  @include lg {
+    width: 25%;
   }
-  // nav
-  .nav__bar {
-    z-index: -100;
+}
+
+.row-33 {
+    width: 33%;
+}
+
+.row-66 {
+  width: 66%;
+}
+
+// Header
+
+.hero {
+  min-height: 700px;
+  max-height: 720px;
+}
+
+// Decor
+
+.divider {
+  border-right: 1px solid $lines;
+}
+
+.divider-dk {
+  border-right: 1px solid $gray-800;
+}
+
+.pad-right {
+  padding-right: $spacer * 5;
+}
+
+.pad-left {
+  padding-left: $spacer * 5;
+}
+
+.pad {
+  padding-bottom: $spacer * 1.5;
+  padding-top: $spacer * 1.5;
+}
+
+//
+//  Computers and Laptops  with Fine Pointers Only
+//
+@include fine {
+  // Nav
+  .nav {
+    height: 166px;
+    padding: 0 $spacer * 3 0 $spacer;
   }
-  .nav__ul {
+
+  .nav-bar {
+    width: 400px;
+    z-index: 180;
+  }
+
+  .nav-logo {
+    display: block;
+    @include img-path("mhns-logo.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-logo--mobile {
+    display: none;
+  }
+
+  .nav-menu {
     flex-direction: row;
     justify-content: flex-end;
     position: relative;
     top: 0;
+    margin-right: $spacer * 2;
     max-width: 2500px;
     width: 100%;
     box-shadow: none;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     padding-top: 0;
+    background-color: $white;
+    overflow-y: visible;
   }
-  .page_item,
-  .menu-item {
-    margin: 0 12px;
+
+  .nav-ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav-ul > .menu-item,
+  .nav-ul > .page-item {
     display: inline-block; // Fallback
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 1.5rem;
     a {
-        line-height: 74px;
+      padding: 1rem;
       &:hover {
-        background-color: $primary;
-        color: $white;
+        color: $primary;
       }
     }
   }
-  .current_page_item a {
-    background-color: $primary;
-    color: $white;
-  }
-  // icons
-  .call__btn {
-    display: flex;
-    white-space: nowrap;
-    line-height: 75px;
-    padding: 0 16px;
-    background-color: $primary;
-    color: $white;
+
+  .menu-item-has-children > a {
+    position: relative;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      right: -8px;
+      bottom: 19px;
+      width: 16px;
+      height: 16px;
+      @include icon-path("caret-down.svg");
+      background-repeat: no-repeat;
+    }
+
   }
 
-  .nav__icon,
-  .icon__call {
-    z-index: -100;
-  }
-
-  .logo__icon {
-    z-index: 165;
-    width: 225px;
-    left: 0;
-    margin: 6px 0 0 12px;
-  }
-
-  // header
-  .hdr__div-logo {
-    padding: 16px 0;
-  }
-
-  .hdr__logo {
+  // Subnav
+  .sub-menu {
+    position: absolute;
+    opacity: 0;
+    min-width: 5rem;
+    transition: all 0.5s ease;
+    transform: none;
     display: none;
+    padding: $spacer;
+    background-color: $white;
+    border: 1px solid $lines;
+    box-shadow: 0px 4px 14px 1px rgba(44, 50, 68, 0.31);
   }
 
-.hdr__pg {
-  max-height: 400px;
-  max-width: 2000px;
-}
-  // banner
- .bnr__h1,
- .cards_hdl {
-   font-size: 3em;
- }
-
- .bnr__desc p {
-   font-size: 2em;
- }
-}
-
-// card
-.cards {
-  padding: 16px;
-}
-
-.card {
-  width: 50%;
-  padding: 3em;
-}
-
-// entry
-.entry-header {
-  max-width: 960px;
-  margin: 0 auto;
-}
-.entry-title {
-  font-size: 2em;
-}
-
-.entry-content {
-  max-width: 960px;
-  margin: 0 auto;
-  font-size: 1.12em;
-}
-
-@include desktops {
-  .box {
-    max-width: 1200px;
-    width: 90%;
+  .menu-item:hover > .sub-menu,
+  .menu-item:focus-within > .sub-menu,
+  .menu-item .sub-menu:hover,
+  .menu-item .sub-menu:focus {
+    opacity: 1;
+    transform: translateY(68%);
+    display: block;
+    z-index: 180;
+    a:hover {
+      color: $primary;
+    }
   }
-  .call__btn {
-    padding: 0 24px;
+
+  .sub-menu li {
+    display: block;
+  	clear: both;
+    width: 100%;
+    list-style: none;
+    padding: $spacer / 2 $spacer;
+    white-space: nowrap;
+  }
+
+  .nav-icon {
+    display: none;
   }
 }
