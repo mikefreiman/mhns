@@ -10,7 +10,7 @@
 get_header('pg');
 ?>
 		<main class="post">
-			<div class="box-sm">
+			<div class="box">
 				<div class="section line">
 				<?php
 				while ( have_posts() ) :

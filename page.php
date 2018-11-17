@@ -15,7 +15,7 @@
 get_header('pg');
 ?>
 		<main id="main" class="page">
-			<div class="box-sm">
+			<div class="box">
 				<div class="section line">
 
 				<?php

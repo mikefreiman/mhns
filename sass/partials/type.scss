@@ -23,6 +23,12 @@ h6, .h6 { font-size: $h6-font-size; }
   font-weight: $lead-font-weight;
 }
 
+.headline {
+  font-size: $h1-font-size;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+}
+
 // Type display classes
 .display-1 {
   font-size: $display1-size;

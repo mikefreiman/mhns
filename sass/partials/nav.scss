@@ -103,3 +103,41 @@
 .nav--visible {
   pointer-events: auto;
 }
+
+// Nav - Users Menu
+.nav-users {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  background-color: $footer-bg;
+}
+
+.nav-ul--users {
+  margin-top: $spacer / 2;
+  margin-bottom: $spacer / 2;
+  padding-right: $spacer;
+  display: flex;
+  li {
+    align-self: center;
+    list-style: none;
+    a {
+      color: $gray-300;
+      font-weight: 500;
+      position: relative;
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: -32px;
+        bottom: 0;
+        width: 26px;
+        height: 18px;
+        @include icon-path("users.svg");
+        background-repeat: no-repeat;
+      }
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

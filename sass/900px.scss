@@ -68,6 +68,35 @@
   padding-top: $spacer * 1.5;
 }
 
+// Entry
+
+.entry-content {
+  figure {
+    flex-direction: row;
+    width: 100% !important;
+    padding: $spacer * 3 0;
+    img {
+      margin: 0 $spacer;
+    }
+    figcaption {
+      padding: $spacer 0;
+      font-size: $font-size-xl;
+    }
+  }
+}
+
+.alignleft {
+  float: left;
+  width: 50%;
+  margin: 0 $spacer $spacer 0;
+}
+
+.alignright {
+  float: right;
+  width: 50%;
+  margin: 0 0 $spacer $spacer;
+}
+
 //
 //  Computers and Laptops  with Fine Pointers Only
 //

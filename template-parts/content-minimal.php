@@ -25,7 +25,7 @@
 	</header><!-- .entry-header -->
 
 
-	<div class="entry-content">
+	<div class="entry-content group">
 		<?php
 		the_content( sprintf(
 			wp_kses(

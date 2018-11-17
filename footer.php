@@ -19,8 +19,10 @@
 				<div class="row-50 divider-dk">
 					<address>
 						Michele McDonough, Executive Director<br>
-						Email: <a href="mailto:mhns@sbcglobal.net">
-						mhns@sbcglobal.net</a><br>
+						Email: <a href="mailto:meetinghousenurseryschool@gmail.com">
+						meetinghousenurseryschool@gmail.com</a><br>
+						Phone: <a href="tel:1-608-233-9776">
+						608-233-9776</a><br>
 						Meeting House Nursery School<br>
 						900 University Bay Drive<br>
 						Madison, WI 53705<br>
