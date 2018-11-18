@@ -6,7 +6,6 @@
   touch-action: manipulation;
   text-align: center;
   border-radius: 0;
-  font-family: $sans;
   font-size: 16px;
   padding: 12px 16px;
   margin: 12px 12px 0 0;
@@ -18,7 +17,7 @@
   border-width: 0px;
   border-color: transparent;
   border-image: none;
-  @include phones {
+  @include sm {
     display: inline-block;
     margin: 8px 8px 0 0;
   }
@@ -29,21 +28,8 @@
 }
 .btn--primary{
   border-color: $primary;
-  color: $primary;
-}
-.btn--violet {
-  border-color: $violet;
-  color: $violet;
-}
-.btn--lt-blue {
-  border-color: $lt-blue;
-  color: $lt-blue;
-}
-.btn--inverse {
-  border-color: $white;
-  background-color: $white;
-  font-weight: 600;
-  color: $dk-blue;
+  background-color: $primary;
+  color: $white;
 }
  .btn--white {
    border-color: $white;

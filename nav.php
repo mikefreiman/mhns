@@ -1,14 +1,3 @@
-<nav class="nav-users">
-  <?php
-  wp_nav_menu( array(
-    'menu' => 'users-menu',
-    'container' => 'ul',
-    'menu_class' => 'nav-ul--users',
-    'theme_location' => 'menu-2',
-
-  ) );
-  ?>
-</nav>
 <nav id="site-navigation" class="nav line main-navigation">
   <div class="nav-bar">
     <a href="<?php echo get_home_url(); ?>" class="nav-logo">
@@ -42,6 +31,18 @@
     </div>
   </div>
   <div class="nav-menu">
+    <div class="nav-close"></div>
+    <div class="nav-users">
+      <?php
+      wp_nav_menu( array(
+        'menu' => 'users-menu',
+        'container' => 'ul',
+        'menu_class' => 'nav-ul--users',
+        'theme_location' => 'menu-2',
+
+      ) );
+      ?>
+    </div>
     <?php
     wp_nav_menu( array(
       'menu' => 'primary-menu',

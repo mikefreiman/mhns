@@ -124,8 +124,12 @@
     display: none;
   }
 
+  .nav-close {
+    display: none;
+  }
+  
   .nav-menu {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
     position: relative;
     top: 0;
@@ -152,7 +156,6 @@
     display: inline-block; // Fallback
     display: flex;
     flex-direction: row;
-    align-items: center;
     margin: 0 1.5rem;
     a {
       padding: 1rem;
@@ -197,7 +200,7 @@
   .menu-item .sub-menu:hover,
   .menu-item .sub-menu:focus {
     opacity: 1;
-    transform: translateY(68%);
+    transform: translateY(80px);
     display: block;
     z-index: 180;
     a:hover {
@@ -216,5 +219,22 @@
 
   .nav-icon {
     display: none;
+  }
+  // Nav - Users Menu
+  .nav-users {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+  }
+
+  .nav-ul--users {
+    a {
+      padding: 0 $spacer * 1.5 0 $spacer * 3.5;
+      &:after {
+        left: 13px;
+        bottom: -16px;
+        background-size: 80%;
+      }
+    }
   }
 }

@@ -36,10 +36,21 @@
 
 }
 
+.nav-close {
+  display: block;
+  width: 32px;
+  height: 32px;
+  @include icon-path("times.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
 // Nav Menu
 .nav-menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   position: fixed;
   top: 0;
@@ -86,6 +97,10 @@
 
 .nav-logo--mobile {
   padding: 24px 0 0 6px;
+  a {
+    color: darken($teal, 15%);
+    font-weight: 500;
+  }
 }
 // Nav Animation
 .nav-menu {
@@ -106,38 +121,37 @@
 
 // Nav - Users Menu
 .nav-users {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-end;
-  background-color: $footer-bg;
+  display: block;
 }
 
 .nav-ul--users {
-  margin-top: $spacer / 2;
-  margin-bottom: $spacer / 2;
   padding-right: $spacer;
   display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: $spacer;
   li {
-    align-self: center;
     list-style: none;
-    a {
-      color: $gray-300;
-      font-weight: 500;
-      position: relative;
-      &:after {
-        display: block;
-        content: "";
-        position: absolute;
-        left: -32px;
-        bottom: 0;
-        width: 26px;
-        height: 18px;
-        @include icon-path("users.svg");
-        background-repeat: no-repeat;
-      }
-      &:hover {
-        color: $primary;
-      }
+    padding: $spacer * 1 0;
+    background-color: darken($teal, 15%);
+    border-radius: 8px;
+  }
+  a {
+    color: $white;
+    font-weight: 500;
+    padding: 0 $spacer * 1.5 0 $spacer * 2.5;
+    position: relative;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 12px;
+      bottom: -22px;
+      width: 46px;
+      height: 40px;
+      @include icon-path("families.svg");
+      background-repeat: no-repeat;
+      background-size: 50%;
     }
   }
 }
