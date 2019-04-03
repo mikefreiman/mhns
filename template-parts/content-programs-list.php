@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page excerpts for the programs on the home page
+ * Template part for displaying the list of programs on the home page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

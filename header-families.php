@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for pages
+ * The header for  the current families page
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *

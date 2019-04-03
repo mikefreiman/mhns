@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for the front page
+ * The header for - image on left - template
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
