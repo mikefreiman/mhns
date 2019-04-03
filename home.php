@@ -14,13 +14,12 @@
 
 get_header('front');
 ?>
-
-		<main>
-			<div class="box">
-				<?php get_template_part( 'sections/program-list' ); ?>
-				<?php get_template_part( 'sections/history' ); ?>
-				<?php get_template_part( 'sections/environment' ); ?>
-			</div>
-		</main><!-- #main -->
+<main>
+	<div class="box">
+		<?php get_template_part( 'sections/program-list' ); ?>
+		<?php get_template_part( 'sections/history' ); ?>
+		<?php get_template_part( 'sections/environment' ); ?>
+	</div>
+</main><!-- #main -->
 <?php
 get_footer();
