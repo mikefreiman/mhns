@@ -24,6 +24,10 @@
   padding: 0 $spacer * 2 0;
 }
 
+.row-50--nopad {
+  width: 50%;
+}
+
 .row-25 {
   @include lg {
     width: 25%;
@@ -38,6 +42,9 @@
   width: 66%;
 }
 
+.grid-img {
+  min-height: 450px;
+}
 // Header
 
 .hero {
@@ -127,7 +134,7 @@
   .nav-close {
     display: none;
   }
-  
+
   .nav-menu {
     flex-direction: column;
     justify-content: flex-end;
@@ -228,13 +235,13 @@
   }
 
   .nav-ul--users {
+    padding-left: $spacer;
+    li {
+      background-color: $accent;
+    }
     a {
-      padding: 0 $spacer * 1.5 0 $spacer * 3.5;
-      &:after {
-        left: 13px;
-        bottom: -16px;
-        background-size: 80%;
-      }
+      color: $white;
     }
   }
+
 }

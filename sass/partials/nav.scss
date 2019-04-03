@@ -98,7 +98,7 @@
 .nav-logo--mobile {
   padding: 24px 0 0 6px;
   a {
-    color: darken($teal, 15%);
+    color: $primary;
     font-weight: 500;
   }
 }
@@ -129,29 +129,15 @@
   display: flex;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: $spacer;
+  padding-left: 0;
   li {
     list-style: none;
-    padding: $spacer * 1 0;
-    background-color: darken($teal, 15%);
-    border-radius: 8px;
+    padding: $spacer * .75 0;
   }
   a {
-    color: $white;
+    color: $primary;
     font-weight: 500;
-    padding: 0 $spacer * 1.5 0 $spacer * 2.5;
+    padding: 0 $spacer;
     position: relative;
-    &:after {
-      display: block;
-      content: "";
-      position: absolute;
-      left: 12px;
-      bottom: -22px;
-      width: 46px;
-      height: 40px;
-      @include icon-path("families.svg");
-      background-repeat: no-repeat;
-      background-size: 50%;
-    }
   }
 }

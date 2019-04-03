@@ -2,7 +2,7 @@
   <h1>Programs</h1>
   <div class="flex-row section">
     <?php get_template_part( 'sections/program-photo' ); ?>
-    <ul class="row-50 pad-left flex flex-col">
+    <ul class="row-50 pad-left flex-col">
     <?php
 		// The Query
 		$the_query = new WP_Query( array( 'category_name' => 'program'));

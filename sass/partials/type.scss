@@ -50,3 +50,9 @@ h6, .h6 { font-size: $h6-font-size; }
   font-weight: $display4-weight;
   line-height: $display-line-height;
 }
+
+.grid-txt {
+  padding: $spacer 0;
+  font-size: $font-size-lg;
+  text-align: center;
+}

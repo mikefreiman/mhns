@@ -18,3 +18,20 @@
 .pad-bottom {
   padding-bottom: $spacer;
 }
+
+.pad-top {
+  padding-top: $spacer;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.accent {
+  color: $accent;
+}
+
+.spcr {
+  display: inline-block;
+  width: 13px;
+}

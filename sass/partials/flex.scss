@@ -10,6 +10,9 @@
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .center {
   align-items: center;
   justify-content: center;
@@ -47,11 +50,19 @@
   width: 100%;
 }
 
-.flex-img {
+.row-50--nopad {
+  width: 100%;
+}
+
+.flex-img,
+.grid-img {
   min-height: 220px;
   height: auto;
-  background-image: url(../img/giraffe.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.grid-img {
+  border: 2px solid #fff;
 }

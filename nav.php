@@ -2,7 +2,7 @@
   <div class="nav-bar">
     <a href="<?php echo get_home_url(); ?>" class="nav-logo">
     </a>
-    <div class="nav-icon" aria-controls="primary-menu" aria-label="Open the navigation drawer." role="button" aria-disabled="false" tabindex="0">
+    <div class="nav-icon" aria-label="Open the navigation drawer." role="button" tabindex="0">
       <svg class="icon icon-nav" viewBox="0 0 24 18.000001">
         <g
            transform="translate(0,-1034.3622)"
@@ -31,7 +31,7 @@
     </div>
   </div>
   <div class="nav-menu">
-    <div class="nav-close"></div>
+    <div class="nav-close" aria-label="Close the navigation drawer." role="button"></div>
     <div class="nav-users">
       <?php
       wp_nav_menu( array(

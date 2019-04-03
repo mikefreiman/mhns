@@ -22,6 +22,7 @@
 
 <body <?php body_class(); ?>>
 	<?php get_template_part('nav'); ?>
+	<?php get_template_part( 'sections/fam-bull' ); ?>
 <div id="page" class="site">
 	<?php if ( get_post_thumbnail_id() ) : ?>
 	<header id="masthead" class="header">

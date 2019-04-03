@@ -9,7 +9,7 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="flex-row">
+<div class=" flex-row">
 	<div class="row-66 pad-right">
 		<div class="section">
 			<?php the_title( '<h1>', '</h1>' ); ?>
@@ -18,7 +18,7 @@
 				the_excerpt();
 				?>
 			</div>
-			<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>">Discover More</a>
+			<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>">Learn More</a>
 		</div>
 	</div>
 	<div class="row-33 flex flex-img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID) ); ?>');">

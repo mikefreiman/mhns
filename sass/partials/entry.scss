@@ -25,6 +25,18 @@
     padding: $spacer 0;
     border-top: 1px solid $lines;
     border-bottom: 1px solid $lines;
+    &.aligncenter {
+      border-top: none;
+      border-bottom: none;
+      display: block;
+      width: 98%;
+      margin: 0 auto;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
     img {
       flex: 1 auto;
       margin: 0 auto;

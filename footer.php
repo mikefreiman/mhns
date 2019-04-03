@@ -16,7 +16,7 @@
 	<footer id="colophon" class="footer section">
 		<div class="box">
 			<div class="flex-row">
-				<div class="row-50 divider-dk">
+				<div class="row-50 divider-dk section">
 					<address>
 						Michele McDonough, Executive Director<br>
 						Email: <a href="mailto:meetinghousenurseryschool@gmail.com">
@@ -27,6 +27,12 @@
 						900 University Bay Drive<br>
 						Madison, WI 53705<br>
 					</address>
+				</div>
+				<div class="row-50 section pad-left">
+					<a href="https://www.juliamatthewsphotography.com/">
+						<div class="photo-logo"></div>
+						<span class="spcr"></span>
+						www.juliamatthewsphotography.com</a>
 				</div>
 			</div>
 		</div>
